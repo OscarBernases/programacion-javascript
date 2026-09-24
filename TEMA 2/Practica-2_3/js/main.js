@@ -7,7 +7,7 @@ const edad = prompt("Introduce tu edad:");
 let salario = parseFloat(sal);
 let salarioFinal = 0;
 
-if (salario >= 2000) {
+if (salario > 2000) {
     salarioFinal = salario;
 } else if (salario >= 1000) {
     if (edad > 45) {
