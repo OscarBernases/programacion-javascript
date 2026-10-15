@@ -1,29 +1,25 @@
-const numeroAleatorio = Math.floor(Math.random() * 100) + 1;
-let acertada = false;
-let intentos = 0;
-let salir = false;
+let jugarDeNuevo = true;
 
-do {
-    const respuesta = prompt("Introduce un número del 1 al 100:");
+while (jugarDeNuevo) {
+    const numeroAleatorio = Math.floor(Math.random() * 100) + 1;
+    let acertada = false;
+    let cancelada = false;
+    let intentos = 0;
 
-    if (respuesta === null) { // El usuario pulsó "Cancelar"
+    do {
+        const respuesta = prompt("Introduce un número del 1 al 100:");
 
-        const seguir = confirm("¿Quieres seguir jugando?");
-
-        if (seguir === false) {
-            salir = true;
-            alert("Terminado exitosamente.");
+        if (respuesta === null) { // El usuario pulsa "Cancelar"
+            cancelada = true;
+            jugarDeNuevo = false;
+            alert("Juego terminado.");
         }
-        // si seguir === true, no hacemos nada más y el bucle vuelve a preguntar
 
-    } else {
+        const texto = respuesta.trim();
+        const respuestaNumero = Number(texto);
 
-        const respuestaNumero = parseInt(respuesta);
-        intentos++;
-
-        if (!Number.isInteger(respuestaNumero)) {
-            alert("Tienes que introducir un número.");
-            intentos--;
+        if (texto === "" || !Number.isInteger(respuestaNumero)) {
+            alert("Tienes que introducir un número entero.");
         } else if (respuestaNumero === numeroAleatorio) {
             acertada = true;
             alert(`Has acertado en ${intentos} intentos.`);
@@ -32,6 +28,12 @@ do {
         } else {
             alert("El número es mayor.");
         }
-    }
 
-} while (!acertada && !salir);
+        intentos++;
+
+    } while (!acertada && !cancelada);
+
+    if (acertada) {
+        jugarDeNuevo = confirm("¿Quieres volver a jugar?");
+    }
+}
