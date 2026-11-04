@@ -1,8 +1,13 @@
 class Ordenador {
     constructor(marca, modelo, ram = 4, disco = 512, pulgadas = 17) {
-        if (!marca || !modelo) {
-            console.log("La marca y el modelo son obligatorios.")
+        if(typeof marca !== "string" || marca.trim() === "") {
+          throw new Error("La marca es obligatoria.");
         }
+
+        if(typeof modelo !== "string" || modelo.trim() === "") {
+          throw new Error("El modelo es obligatorio.");
+        }
+        
         this.marca = marca;
         this.modelo = modelo;
         this.ram = ram;
