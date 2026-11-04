@@ -11,7 +11,7 @@ class Ordenador {
     }
 
     toString() {
-        return `${this.marca} ${this.modelo} — RAM: ${this.ram} GB, Disco: ${this.disco} GB, Pantalla: ${this.pulgadas}"`;
+        return `${this.marca} ${this.modelo} - RAM: ${this.ram} GB, Disco: ${this.disco} GB, Pantalla: ${this.pulgadas}"`;
     }
 }
 
