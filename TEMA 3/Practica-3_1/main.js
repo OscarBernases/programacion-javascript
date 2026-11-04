@@ -27,7 +27,7 @@ class Portatil extends Ordenador {
 }
 
 // Ordenador indicando marca y modelo
-const pc1= new Ordenador("HP", "EliteBook");
+const pc1 = new Ordenador("HP", "EliteBook");
 
 // Ordenador indicando todos los valores
 const pc2 = new Ordenador("HP", "Gaming", 32, 1024, 27);
