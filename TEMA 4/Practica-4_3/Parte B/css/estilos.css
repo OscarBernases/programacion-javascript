@@ -1,0 +1,78 @@
+/* Estilos mínimos de partida. Puedes ampliarlos (requisito R8). */
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  color: #222;
+  background: #f7f7f5;
+}
+
+header {
+  background: #2f4858;
+  color: #fff;
+  padding: 1rem 2rem;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+section {
+  background: #fff;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Ampliación (R8) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.5rem 0.6rem;
+  border-bottom: 1px solid #e3e3df;
+}
+
+th {
+  background: #eef2f4;
+}
+
+/* Libros prestados: fila atenuada y en cursiva */
+tr.prestado td {
+  color: #8a8a85;
+  font-style: italic;
+  background: #fbf3ee;
+}
+
+.nota {
+  color: #2f4858;
+  font-weight: 600;
+}
+
+.etiquetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.etiquetas li {
+  background: #2f4858;
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+}
+
+.resumen {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1.8;
+}
